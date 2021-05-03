@@ -38,15 +38,15 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 
 ## A. Local installation
 
-1. Use RVM or rbenv
+1. Use RVM or rbenv, have PostgreSQL running
 2. clone this repository and `cd` into it
 3. `bundle install`
 4. `yarn`
-5. `rails db:create` -> might need you to configure database access
+5. `rails db:create` -> *might need you to configure database credentials*
 6. `rails db:schema:load`
 7. `rails data:migrate` **IMPORTANT!** to load Country and Car brands data
 8. `rails s` to launch local server
-9. Open another terminal and launch the background jobs queue by `bundle exec good_job start`
+9. Open another terminal and launch the background jobs queue with `bundle exec good_job start`
 10. See the app at http://127.0.0.1:3000/
 
 ## B. Gems choice
