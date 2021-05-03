@@ -26,6 +26,14 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 3. Downloadable CSV reports and import template
 3. List of customers-vehicles that is filterable
 
+## C. Screenshots
+
+![Main list](https://raw.githubusercontent.com/FranckyU/csbee/main/public/Screenshot.png "Main list")
+
+![Reports download](https://raw.githubusercontent.com/FranckyU/csbee/main/public/Screenshot2.png "Reports download")
+
+![Modal](https://raw.githubusercontent.com/FranckyU/csbee/main/public/Screenshot3.png "Modal")
+
 # Code
 
 ## A. Local installation
