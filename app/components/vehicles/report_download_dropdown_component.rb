@@ -30,11 +30,11 @@ module Vehicles
     def default_links
       [
         [
-          "Customers by nationality",
+          "Customers count by nationality",
           helpers.customers_by_nationality_reports_path(format: :csv)
         ],
         [
-          "Odometer reading by nationality",
+          "Avg. odometer reading by nationality",
           helpers.average_odometer_reading_by_nationality_reports_path(format: :csv)
         ]
       ]
