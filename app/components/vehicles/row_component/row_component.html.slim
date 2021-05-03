@@ -1,0 +1,22 @@
+tr
+  td.px-6.py-4.whitespace-nowrap.text-sm.font-medium.text-gray-900
+    = @vehicle.owner.name
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-blue-500
+    = link_to @vehicle.owner.email, "mailto:#{@vehicle.owner.email}"
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.owner.decorate.displayable_country
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.cached_car_model 
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.chassis_number
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.year
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.color
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = helpers.l(@vehicle.registration_date.to_date)
+  td.px-6.py-4.whitespace-nowrap.text-sm.text-gray-500
+    = @vehicle.odometer_reading
+  td.px-6.py-4.whitespace-nowrap.text-right.text-sm.font-medium
+    = link_to vehicle_path(@vehicle), data: { method: :delete, confirm: "Are you sure?" }, class: "text-gray-400 hover:text-red-200" do
+      = heroicon "trash", options: { class: "w-5 h-5"} 

@@ -1,0 +1,20 @@
+= turbo_frame_tag "page-modal" do
+  = render Generic::ModalComponent.new(title: "Import CSV") do
+    = form_for @vehicles_import, url: process_import_vehicles_path, method: :post, :multipart => true do |f|
+      .mt-5
+        = f.file_field :csv_file
+        - if @vehicles_import.errors.where(:csv_file).any?
+          - @vehicles_import.errors.where(:csv_file).each do |err|
+            span.text-red-400.text-sm= err.message
+
+      .mt-3
+        = link_to import_template_vehicles_path(format: :csv), class: "text-sm text-blue-400 flex" do
+          = heroicon "download", options: { class: "w-4 h-4"}
+          span Download template CSV
+
+      .mt-5.sm:mt-4.sm:flex
+        input.inline-flex.justify-center.w-full.rounded-md.border.border-transparent.shadow-sm.px-4.py-2.bg-blue-600.text-base.font-medium.text-white.hover:bg-blue-700.focus:outline-none.sm:w-auto.sm:text-sm[type="submit" value="Upload"]
+
+        button.mt-3.w-full.inline-flex.justify-center.rounded-md.border.border-gray-300.px-4.py-2.bg-white.text-base.font-medium.text-gray-700.shadow-sm.hover:bg-gray-50.focus:outline-none.sm:mt-0.sm:ml-3.sm:w-auto.sm:text-sm[type="button" data-action="generic--modal-component--modal#close"]
+          |  Cancel  
+

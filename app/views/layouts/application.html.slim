@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title
+      | Csbee
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbo-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbo-track': 'reload'
+  body.bg-gray-100
+    .max-w-7xl.mx-auto.sm:px-6.lg:px-8.py-7
+      .md:flex.md:items-center.md:justify-between
+        .flex-1.min-w-0
+          h2.text-2xl.font-bold.leading-7.text-gray-900.sm:text-3xl.sm:truncate
+            = yield :page_title
+        .mt-4.flex.md:mt-0.md:ml-4
+          = yield :page_actions
+
+      .mt-8
+        = yield :search
+
+      .mt-8.flex.flex-col
+        .-my-2.overflow-x-auto.sm:-mx-6.lg:-mx-8
+          .py-2.align-middle.inline-block.min-w-full.sm:px-6.lg:px-8
+            .shadow.overflow-hidden.border-b.border-gray-200.sm:rounded-lg
+              = yield
+
+    = turbo_frame_tag "page-modal" do
+      / modal placeholder

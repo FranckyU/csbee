@@ -1,0 +1,125 @@
+Abarth
+Alfa Romeo
+Alpina
+Alpine
+Armstrong Siddeley
+Asia Motors
+Aston Martin
+Audi
+Austin
+Austin Healey
+Australian Classic Car
+Bedford
+Bentley
+Bertone
+Blade
+BMC
+BMW
+Bolwell
+Bufori
+Bugatti
+Buick
+Cadillac
+Caterham
+Chery
+Chevrolet
+Chrysler
+Citroen
+Commer
+CSV
+Daewoo
+Daihatsu
+Daimler
+Datsun
+De Tomaso
+Dodge
+Elfin
+Eunos
+Ferrari
+Fiat
+Ford
+Ford Performance Vehicles
+Foton
+FSM
+Geely
+Genesis
+Giocattolo
+Great Wall
+Haval
+HDT
+Hillman
+Hino
+Holden
+Holden Special Vehicles
+Honda
+Humber
+Hummer
+Hyundai
+INFINITI
+International
+ISO
+Isuzu
+Jaguar
+Jeep
+Jensen
+JMC
+Kia
+KTM
+Lada
+Lamborghini
+Lancia
+Land Rover
+LDV
+Lexus
+Leyland
+Lightburn
+Lincoln
+Lotus
+Mahindra
+Maserati
+Maybach
+Mazda
+McLaren
+Mercedes-Benz
+MG
+MINI
+Mitsubishi
+Morgan
+Morris
+Nissan
+Noble
+NSU
+Opel
+Pagani
+Peugeot
+Pontiac
+Porsche
+Proton
+RAM
+Rambler
+Renault
+Robnell
+Rolls-Royce
+Rover
+Saab
+Seat
+Simca
+SKODA
+smart
+SsangYong
+Studebaker
+Subaru
+Suzuki
+Tata
+TD 2000
+Tesla
+Toyota
+TRD
+Triumph
+TVR
+Vanden Plas
+Vauxhall
+Volkswagen
+Volvo
+Wolseley
+ZX Auto

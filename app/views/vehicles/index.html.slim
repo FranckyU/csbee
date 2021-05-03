@@ -1,0 +1,39 @@
+= content_for :page_title do
+  | Vehicles
+
+= content_for :page_actions do
+  .inline-flex.mr-3
+    = turbo_frame_tag "refresh", target: "list" do
+      = link_to vehicles_path, class: "text-green-500 block pt-2" do
+        = heroicon "refresh", options: { class: "w-6 h-6 fill-current" }
+
+  .inline-flex.items-center 
+    = turbo_frame_tag "import-button", target: "page-modal" do
+      = link_to "Import CSV", import_vehicles_path, class: "px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none"
+  
+  .inline-flex.ml-3
+    = render Vehicles::ReportDownloadDropdownComponent.new
+
+= content_for :search do
+  = turbo_frame_tag "search-form", target: "list" do
+    = form_for @q, url: vehicles_path, method: :get do |f|
+      .relative.text-gray-600.w-96
+        = f.search_field :year_or_chassis_number_or_color_or_cached_car_model_or_owner_name_or_owner_email_or_owner_country_name_or_car_model_name_or_car_model_car_make_brand_cont, class: "bg-white w-full h-10 px-5 pr-10 rounded-full text-sm focus:outline-none", placeholder: "Search by car, owner, model/brand , country"
+        button.absolute.right-0.top-0.mt-3.mr-4.focus:outline-none[type="submit"]
+          = heroicon "search", options: { class: "w-4 h-4 fill-current" }
+
+= turbo_frame_tag "list" do
+  table.min-w-full.divide-y.divide-gray-200
+    = render Vehicles::ListHeadersComponent.new
+    tbody.bg-white.divide-y.divide-gray-200
+      - if @vehicles.exists?
+        - @vehicles.each do |vehicle|
+          = render Vehicles::RowComponent.new(vehicle: vehicle)
+      - else
+        = render Vehicles::EmptyRowComponent.new
+
+  - if @vehicles.exists? && @pagination.pages > 1
+    .mt-3.py-4.px-8.text-right
+      == pagy_nav(@pagination)
+      .mt-4.text-gray-500.text-sm
+        == pagy_info(@pagination)

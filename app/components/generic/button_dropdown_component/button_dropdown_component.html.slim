@@ -1,0 +1,12 @@
+.relative.inline-block.text-left[data-controller="generic--button-dropdown-component--dropdown"]
+  div
+    button#menu-button.inline-flex.justify-center.w-full.rounded-md.border.border-gray-300.shadow-sm.px-4.py-2.text-sm.font-medium.focus:outline-none[type="button" aria-expanded="true" aria-haspopup="true" class="bg-#{@button_color} text-#{@label_color} hover:bg-#{@button_hover_color}" data-action="click->generic--button-dropdown-component--dropdown#toggle"]
+      - if @icon
+        = heroicon @icon, options: { class: "h-5 w-5 mr-3" }
+      = @label 
+      = heroicon "chevron-down", options: { class: "h-5 w-5 ml-1" }
+
+  .hidden.origin-top-right.absolute.right-0.mt-2.w-56.rounded-md.shadow-lg.bg-white.ring-1.ring-black.ring-opacity-5.focus:outline-none[role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"]
+    .py-1[role="none"]
+      - @links.each do |link|
+        = link_to link[0], link[1], **(link[2] || {}).merge({ class: "text-gray-700 block px-4 py-2 text-sm", role: "menuitem", tabindex: "-1" })
