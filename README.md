@@ -47,7 +47,7 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 7. `rails data:migrate` **IMPORTANT!** to load Country and Car brands data
 8. `rails s` to launch local server
 9. Open another terminal and launch the background jobs queue with `bundle exec good_job start`
-10. See the app at http://127.0.0.1:3000/
+10. See the app at http://127.0.0.1:3000/ and background jobs dashboard at http://127.0.0.1:3000/good_job/
 
 ## B. Gems choice
 
