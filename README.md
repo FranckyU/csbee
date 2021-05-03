@@ -1,7 +1,7 @@
 # Csbee app
 
 ## A. Description
-Rails app that allows users to upload a CSV file containing vehicles information
+Reactive Rails 6.1 app that allows users to upload a CSV file containing vehicles information
 
 Reference CSV data (downloadable as a template from within import modal)
 
@@ -21,7 +21,7 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 
 ## B. Main features
 
-1. Leverage reactive Rails using Hotwire Turbo
+1. Leverage Reactive Rails using Hotwire Turbo
 2. Async offload of the import to background jobs so to not block the UI
 3. Downloadable CSV reports and import template
 3. List of customers-vehicles that is filterable
@@ -36,9 +36,10 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 4. `yarn`
 5. `rails db:create` -> might need you to configure database access
 6. `rails db:schema:load`
-7. `rails data:migrate` IMPORTANT to load Country and Car brands data
+7. `rails data:migrate` **IMPORTANT!** to load Country and Car brands data
 8. `rails s` to launch local server
 9. Open another terminal and launch the background jobs queue by `bundle exec good_job start`
+10. See the app at http://127.0.0.1:3000/
 
 ## B. Gems choice
 
