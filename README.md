@@ -36,7 +36,7 @@ Notice that `Name` and `Nationality` columns can overlap -> handle that
 4. `yarn`
 5. `rails db:create` -> might need you to configure database access
 6. `rails db:schema:load`
-7. `rails data:migrate`
+7. `rails data:migrate` IMPORTANT to load Country and Car brands data
 8. `rails s` to launch local server
 9. Open another terminal and launch the background jobs queue by `bundle exec good_job start`
 
