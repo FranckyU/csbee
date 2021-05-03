@@ -19,14 +19,14 @@ Joseph,Sasank,joseph@sasank.me,Ford Focus,2020,888888888,Black,02/11/2019,34000
 Notice that `Name` and `Nationality` columns can overlap -> handle that
 
 
-## B. Main features
+## B. Main features...
 
 1. Leverage Reactive Rails using Hotwire Turbo
 2. Async offload of the import to background jobs so to not block the UI
 3. Downloadable CSV reports and import template
 3. List of customers-vehicles that is filterable
 
-## C. Screenshots
+## C. ... so show it!
 
 ![Main list](https://raw.githubusercontent.com/FranckyU/csbee/main/public/Screenshot.png "Main list")
 
